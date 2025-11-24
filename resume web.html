@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Welcome to My Website</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #003366;
+            padding: 18px;
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #00509e;
+            padding: 12px;
+        }
+
+        nav button {
+            background: white;
+            border: none;
+            padding: 10px 18px;
+            margin: 0 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #003366;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav button:hover {
+            background: #dce6f2;
+        }
+
+        .container {
+            padding: 20px 30px;
+        }
+
+        h2 {
+            color: #003366;
+            border-left: 4px solid #003366;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        .section {
+            padding: 15px;
+            border: 1px solid #003366;
+            border-radius: 6px;
+            margin-top: 10px;
+            background: none;
+        }
+
+        p, li {
+            font-size: 18px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        /* Hide pages */
+        .page {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</head>
+
+<body></body>
+
+<header>
+    Roopadevi Portfolio 
+</header>
+
+<nav>
+    <button onclick="showPage('resume')">Resume</button>
+    <button onclick="showPage('biodata')">Biodata</button>
+</nav>
+
+<div class="container">
+
+    <!-- RESUME PAGE -->
+    <div id="resume" class="page active">
+        <h2>Resume</h2>
+
+        <div class="section">
+            <p><strong>Name:</strong> Roopadevi Y</p>
+            <p><strong>Email:</strong> roopadevi1845@gmail.com</p>
+            <p><strong>Phone:</strong> 7619403350</p>
+        </div>
+
+        <h2>Career Objective</h2>
+        <div class="section">
+            <p>
+                To secure a responsible position that allows me to apply my technical skills, contribute to organizational growth,
+                and continuously develop my abilities in the field of Computer Science and Engineering.
+            </p>
+        </div>
+
+        <h2>Education</h2>
+        <div class="section">
+            <p><strong>B.E - Computer Science Engineering</strong></p>
+            <p>JSSATEB | 2023–2027</p>
+        </div>
+
+        <h2>Projects</h2>
+        <div class="section">
+            <p><strong>House Price Prediction using Data Science & Machine Learning</strong></p>
+            <ul>
+                <li>Developed ML model to estimate house prices using Python.</li>
+                <li>Performed data cleaning, EDA, and feature engineering.</li>
+                <li>Implemented Linear Regression, Random Forest, and XGBoost models.</li>
+                <li>Improved model accuracy using hyperparameter tuning.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- BIODATA PAGE -->
+    <div id="biodata" class="page">
+        <h2>Biodata</h2>
+
+        <div class="section">
+            <p><strong>Name:</strong> Roopadevi Y</p>
+            <p><strong>Father's Name:</strong> Yallappa T</p>
+            <p><strong>Mother's Name:</strong> Lalithamma</p>
+            <p><strong>Date of Birth:</strong> 18-04-2005</p>
+            <p><strong>Gender:</strong> Female</p>
+            <p><strong>Nationality:</strong> Indian</p>
+            <p><strong>Languages Known:</strong> Kannada, Telugu, English</p>
+            <p><strong>Address:</strong> Chitradurga, Karnataka</p>
+        </div>
+
+        <h2>Hobbies</h2>
+        <div class="section">
+            <ul>
+                <li>Reading Books</li>
+                <li>Watching Movies</li>
+            </ul>
+        </div>
+
+        <h2>Declaration</h2>
+        <div class="section">
+            <p>I hereby declare that all the information provided above is true to the best of my knowledge.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
